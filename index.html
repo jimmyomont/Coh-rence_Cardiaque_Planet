@@ -18,7 +18,8 @@
   <header>
     <nav>
       <span id="nav"">
-      <a href="/">Theme</a>
+      <a>Theme</a>
+
       <select name="" id="planet">
         <option value="0">veuillez choisir</option>
         <option value="1">soleil</option>
@@ -28,7 +29,7 @@
         <option value="5">mars</option>
         <option value="6">venus</option>
       </select>
-      <a href="/">Rythme</a>
+      <a>Rythme</a>
       <select name="" id="rythme">
         <option value="0">veuillez choisir</option>
         <option value="1">6/4</option>
@@ -36,23 +37,24 @@
         <option value="3">4/6</option>
         <option value="4">3/7</option>
       </select>
-      <a href="/">Audio</a>      
+      <a>Audio</a>
       <select name="" id="sound">
         <option value="0">veuillez l'audio</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+        <option value="1">audio mute </option>
+        <option value="2">audio 1</option>
+        <option value="3">audio 2</option>
+        <option value="4">audio 3</option>
+        <option value="5">audio 4</option>
       </select>
     </span>
-    <audio   controls="controls" >
-      <source src = "/sound/lunar-wind-53078.mp3" id="piste"/>
+    <audio class="hidden" autoplay controls="controls"id="piste" >
+      <source src = "" />
     </audio>
   </header>
     </nav>
   <main>
-
+      <button class="hidden" id="play">play</button>
+      <button class="hidden" id="pause">pause</button>
   <div id="stars"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>

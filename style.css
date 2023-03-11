@@ -40,6 +40,13 @@ nav {
   background-color: #161d30;
   border-right: 2rem solid #232038;
 }
+.article{
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: #161d30;
+  border-right: 2rem solid #232038;
+}
 span {  
   min-height: 100vh;  
   padding: 2rem;
@@ -60,12 +67,12 @@ span a,select {
   width: 100%;
 }
 
-span a:hover {
+/* span a:hover {
   background: #161d30;
   border: 1px solid rgba(255, 255, 255, .1);
-}
+} */
 select:hover {
-
+  cursor: pointer;
     background: #161d30;
 }
 
