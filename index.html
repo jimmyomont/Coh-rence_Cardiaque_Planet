@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre système solaire</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;900&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+
+
+  <header>
+    <nav>
+      <span id="nav"">
+      <a href="/">Theme</a>
+      <select name="" id="planet">
+        <option value="0">veuillez choisir</option>
+        <option value="1">soleil</option>
+        <option value="2">lune</option>
+        <option value="3">terre</option>
+        <option value="4">jupiter</option>
+        <option value="5">mars</option>
+        <option value="6">venus</option>
+      </select>
+      <a href="/">Rythme</a>
+      <select name="" id="rythme">
+        <option value="0">veuillez choisir</option>
+        <option value="1">6/4</option>
+        <option value="2">5/5</option>
+        <option value="3">4/6</option>
+        <option value="4">3/7</option>
+      </select>
+      <a href="/">Audio</a>      
+      <select name="" id="sound">
+        <option value="0">veuillez l'audio</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </span>
+    <audio   controls="controls" >
+      <source src = "/sound/lunar-wind-53078.mp3" id="piste"/>
+    </audio>
+  </header>
+    </nav>
+  <main>
+
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <img class="svg hidden" id="svg">
+ 
+    <article  id="main">
+        <h1>Ma cohérence cardiaque</h1>
+    <p>avez vous choisi vos options ?</p>
+    <a  id="btn" target="_blank">Alors démarrons la relaxation</a>
+    </article>
+
+  </main>
+
+
+
+</body>
+</html>
