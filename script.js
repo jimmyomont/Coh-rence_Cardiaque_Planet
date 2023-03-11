@@ -91,43 +91,43 @@ default:
 });
 
 //-----------------------------sound---------------
-btn.addEventListener ('click', ()=>{ 
-    let audioValue = sound.value; 
-if ( main.classList.add('hidden') === main.classList.add('hidden') ){
+// btn.addEventListener ('click', ()=>{ 
+//     let audioValue = sound.value; 
+// if ( main.classList.add('hidden') === main.classList.add('hidden') ){
     
-switch (audioValue){
-    case "1": 
-    // ajouter css src 
-    piste.src = "./sound/ambient-dream.mp3"; 
-    console.log(piste);
-    break;
+// switch (audioValue){
+//     case "1": 
+//     // ajouter css src 
+//     piste.src = "./sound/ambient-dream.mp3"; 
+//     console.log(piste);
+//     break;
 
-    case "2": 
-    svg.src = "/svg/moon.png"; 
-    svg.classList.remove('hidden')
-    break;
+//     case "2": 
+//     svg.src = "/svg/moon.png"; 
+//     svg.classList.remove('hidden')
+//     break;
 
-    case "3": 
-    svg.src = "/svg/terre.png"; 
-    svg.classList.remove('hidden')
-    break;
+//     case "3": 
+//     svg.src = "/svg/terre.png"; 
+//     svg.classList.remove('hidden')
+//     break;
 
-    case "4": 
-    svg.src = "/svg/Jupiter.png"; 
-    svg.classList.remove('hidden')
-    break;
-    case "5": 
-    svg.src = "/svg/mars.png"; 
-    svg.classList.remove('hidden')
-    break;
-    case "6": 
-    svg.src = "/svg/venus.png"; 
-    svg.classList.remove('hidden')
-    break;
+//     case "4": 
+//     svg.src = "/svg/Jupiter.png"; 
+//     svg.classList.remove('hidden')
+//     break;
+//     case "5": 
+//     svg.src = "/svg/mars.png"; 
+//     svg.classList.remove('hidden')
+//     break;
+//     case "6": 
+//     svg.src = "/svg/venus.png"; 
+//     svg.classList.remove('hidden')
+//     break;
 
-default:
-    window.alert('veuillez choisir un theme'); 
-    location.reload(); 
-    break;
-}}
-});
+// default:
+//     window.alert('veuillez choisir un theme'); 
+//     location.reload(); 
+//     break;
+// }}
+// });
