@@ -39,22 +39,41 @@
       </select>
       <a>Audio</a>
       <select name="" id="sound">
-        <option value="0">veuillez l'audio</option>
+        <option value="0">veuillez choisir</option>
         <option value="1">audio mute </option>
-        <option value="2">audio 1</option>
-        <option value="3">audio 2</option>
-        <option value="4">audio 3</option>
-        <option value="5">audio 4</option>
+        <option value="2">ambient dream</option>
+        <option value="3">lunar wind</option>
+        <option value="4">city of the future</option>
+        <option value="5">spaceship ambience</option>
+        <option value="6">the ice fields voyager</option>
+
+      </select>
+      <button  id="playtest">test</button>
+
+      <a>Timer</a>
+      <select name="" id="compteur">
+        <option value="0">veuillez choisir</option>
+        <option value="1">1 minute</option>
+        <option value="2">2 minutes</option>
+        <option value="3">3 minutes</option>
+        <option value="4">4 minutes</option>
+        <option value="5">5 minutes</option>
       </select>
     </span>
+
+    <span class="hidden" id="nav2">
+      <p id="timer"></p>
+      <button  id="play">play</button>
+      <button  id="pause">pause</button>
+    </span>
+
+
     <audio class="hidden" autoplay controls="controls"id="piste" >
       <source src = "" />
     </audio>
   </header>
     </nav>
   <main>
-      <button class="hidden" id="play">play</button>
-      <button class="hidden" id="pause">pause</button>
   <div id="stars"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
