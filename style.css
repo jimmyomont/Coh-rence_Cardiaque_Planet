@@ -21,7 +21,7 @@
 }
 
 html {
-  min-width: auto;
+  min-width: 10px;
 
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
@@ -218,7 +218,7 @@ main a:hover {
 
 
 html {
-  height: 100%;
+
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   overflow: hidden;
 }
