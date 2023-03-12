@@ -81,7 +81,7 @@ switch (planetValue){
     svg.classList.remove('hidden')
     break;
     case "5": 
-    svg.src = "/svg/mars.png"; 
+    svg.src = "/svg/Mars.png"; 
     svg.classList.remove('hidden')
     break;
     case "6": 
