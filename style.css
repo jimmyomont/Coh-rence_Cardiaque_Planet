@@ -50,6 +50,11 @@ nav {
   border-right: 2rem solid #232038;
 }
 
+.playStop {
+  width: 1.5em;
+  margin: 0;
+}
+
 span {
   min-height: 100vh;
   padding: 2rem;
@@ -70,6 +75,7 @@ select, button {
   border-radius: 2rem;
   width: 100%;
   background: #161d30;
+  border: 1px solid #534c7e;
 }
 nav a {
   background-color: rgb(136, 0, 255);
@@ -81,11 +87,13 @@ nav a {
 select:hover {
   cursor: pointer;
   background: #161d30;
+  border: 1px solid rgb(136, 0, 255);
 }
 button:hover {
   cursor: pointer;
   background: #161d30;
-  border: 1px solid rgb(151, 137, 137);
+  color: rgb(136, 0, 255);
+  border: 1px solid rgb(136, 0, 255);
 }
 
 
@@ -202,6 +210,11 @@ main a:hover {
   }
 }
 
+#timer {
+  color: rgb(136, 0, 255);
+  font-size: 5rem;
+  font-weight: bold;
+}
 
 
 

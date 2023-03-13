@@ -126,8 +126,9 @@ piste.src = "./sound/lunar-wind.mp3";
 }}
 });
 //-----------------------------extrait sound ----------------------
+const beep = new Audio(); 
 function playExtrait( audio_path, time_in_milisec){
-    let beep = new Audio( audio_path);
+    beep.src = audio_path;
     beep.loop = true;
     beep.play();
     setTimeout(() => { beep.pause(); }, time_in_milisec);
@@ -136,24 +137,28 @@ function playExtrait( audio_path, time_in_milisec){
 playTest.addEventListener('click', ()=>{
     console.log(('plkatest'));
     let audioValue = sound.value; 
+    if (beep.paused){
     switch (audioValue){
         case "2":
-            playExtrait("./sound/ambient-dream.mp3", 6000);
+            playExtrait("./sound/ambient-dream.mp3", 30000);
         break;
         case "3":
-            playExtrait("./sound/lunar-wind.mp3", 6000);
+            playExtrait("./sound/lunar-wind.mp3", 30000);
         break;
         case "4":
-            playExtrait("./sound/sounds-of-the-gloomy-city-of-the-future.mp3", 6000);
+            playExtrait("./sound/sounds-of-the-gloomy-city-of-the-future.mp3", 30000);
         break;
         case "5":
-            playExtrait("./sound/spaceship-ambience-with-effects.mp3", 6000);
+            playExtrait("./sound/spaceship-ambience-with-effects.mp3", 30000);
         break;
         case "6":
-            playExtrait("./sound/stretched-sounds-with-07-neptune-the-ice-fields-voyager-audiolog.mp3", 6000);
+            playExtrait("./sound/stretched-sounds-with-07-neptune-the-ice-fields-voyager-audiolog.mp3", 30000);
         break;
-
     }
+    }
+        else {beep.pause()}
+
+
 
 })
 // -----------------------------------------play/pause--------------------
@@ -218,3 +223,19 @@ let id = null;
             break;
     }}
 })
+
+//-----------------------------------close-------------------------------------
+
+//------------------------btn close-------------------------------------
+//variable du bouton close
+const btnClose = document.querySelector('.btnClose');
+
+//Ecoute la bouton close 
+btnClose.addEventListener('click', () => {
+    location.reload(); 
+})
+ //--------------------------volume audio ---------------------------------------
+const test = document.getElementById('testaudio')
+beep.volume =0.05; 
+piste.volume = 0.1;
+console.log(beep.volume); // 1
