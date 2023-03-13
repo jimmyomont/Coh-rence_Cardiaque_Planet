@@ -132,6 +132,18 @@ main a:hover {
   background-color: #50A;
 }
 
+.float {
+    animation-name: float;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+  @keyframes float{
+    50%{
+      transform: translateY(30px);
+    }
+  }
+
 
 .svg {
   width: 50%;
@@ -152,8 +164,6 @@ main a:hover {
 .rythme64 {
   animation: 10s linear infinite normal planet64;
 }
-
-
 
 @keyframes planet37 {
   0% {
@@ -218,17 +228,7 @@ main a:hover {
 }
 
 
-
-
-
-
-
-
 /* -------------------------------------background------------------------ */
-
-
-
-
 
 
 html {
