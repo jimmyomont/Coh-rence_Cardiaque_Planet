@@ -235,7 +235,7 @@ btnClose.addEventListener('click', () => {
     location.reload(); 
 })
  //--------------------------volume audio ---------------------------------------
-const test = document.getElementById('testaudio')
+
 beep.volume =0.05; 
 piste.volume = 0.1;
-console.log(beep.volume); // 1
+
