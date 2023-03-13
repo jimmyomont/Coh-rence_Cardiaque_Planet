@@ -69,6 +69,7 @@ select, button {
   padding: 1rem;
   border-radius: 2rem;
   width: 100%;
+  background: #161d30;
 }
 nav a {
   background-color: rgb(136, 0, 255);
