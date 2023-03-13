@@ -14,6 +14,7 @@ const select = document.querySelector("#compteur");
 const timerElement = document.getElementById('timer');
 const beep = new Audio();
 const btnClose = document.querySelector('.btnClose');
+const etoile = document.getElementById('etoile')
 
 //--------------------hidden page ---------------------------
 btn.addEventListener('click', () => {
@@ -22,6 +23,7 @@ btn.addEventListener('click', () => {
     main.classList.add('hidden')
     play.classList.remove('hidden');
     pause.classList.remove('hidden');
+    etoile.classList.add('hidden');
 
 })
 
