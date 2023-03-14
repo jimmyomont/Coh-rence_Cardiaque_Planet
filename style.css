@@ -24,7 +24,8 @@ html {
   min-width: auto;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 300; 
+  cursor:default;
 }
 
 body {
@@ -81,6 +82,7 @@ button {
 
 nav a {
   background-color: rgb(136, 0, 255);
+  cursor:default;
 }
 
 /* span a:hover {
