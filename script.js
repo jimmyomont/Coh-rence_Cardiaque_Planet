@@ -15,7 +15,6 @@ const timerElement = document.getElementById('timer');
 const beep = new Audio();
 const btnClose = document.querySelector('.btnClose');
 const etoile = document.getElementById('etoile')
-
 //--------------------hidden page ---------------------------
 btn.addEventListener('click', () => {
     nav.classList.add('hidden');
@@ -63,7 +62,8 @@ btn.addEventListener('click', () => {
 btn.addEventListener('click', () => {
     let planetValue = planet.value;
     if (main.classList.add('hidden') === main.classList.add('hidden')) {
-
+        svg.classList.remove('svgHidden')
+        svg.classList.remove('float')
         switch (planetValue) {
             case "1":
                 // ajouter css src
@@ -239,3 +239,44 @@ btnClose.addEventListener('click', () => {
 beep.volume = 0.05;
 piste.volume = 0.1;
 
+//-----------------------select affichage-----------------
+
+planet.addEventListener('click', () => {
+    let planetValue = planet.value;
+                svg.classList.add('svgHidden')
+                svg.classList.add('float')
+        switch (planetValue) {
+            case "1":
+                // ajouter css src
+                svg.src = "/svg/sun.png";
+                svg.classList.remove('hidden')
+                break;
+
+            case "2":
+                svg.src = "/svg/moon.png";
+                svg.classList.remove('hidden')
+                break;
+
+            case "3":
+                svg.src = "/svg/terre.png";
+                svg.classList.remove('hidden')
+                break;
+
+            case "4":
+                svg.src = "/svg/Jupiter.png";
+                svg.classList.remove('hidden')
+                break;
+            case "5":
+                svg.src = "/svg/Mars.png";
+                svg.classList.remove('hidden')
+                break;
+            case "6":
+                svg.src = "/svg/venus.png";
+                svg.classList.remove('hidden')
+                break;
+            default:
+                svg.classList.add('hidden')
+                    break;
+        }
+    }
+);
