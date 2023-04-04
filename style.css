@@ -1,3 +1,6 @@
+
+
+
 .hidden {
   display: none;
 }
@@ -26,6 +29,8 @@ html {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300; 
   cursor:default;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
 }
 
 body {
@@ -61,11 +66,14 @@ span {
   padding: 2rem;
   gap: 1rem;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
+  justify-content: space-evenly;
 }
-
+.navFlex {
+  display: flex;
+  flex-wrap: nowrap;
+}
 span a,
 select,
 button {
@@ -78,6 +86,7 @@ button {
   width: 100%;
   background: #161d30;
   border: 1px solid #534c7e;
+  margin: 0.5em;
 }
 
 nav a {
@@ -142,14 +151,26 @@ main a:hover {
   animation-name: float;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-
 }
-
 @keyframes float {
   50% {
     transform: translateY(30px);
   }
+
 }
+.floatbis {
+  animation-name: floatbis;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.6s;
+}
+
+@keyframes floatbis {
+  50% {
+    transform: translateY(30px);
+  }
+}
+
 
 
 .svg {
@@ -230,15 +251,80 @@ main a:hover {
   }
 }
 
-#timer {
+#timer, #end {
   color: rgb(136, 0, 255);
   font-size: 5rem;
   font-weight: bold;
 }
 
+ /* #navMobil {
+  display: none;
+}  */
+
+@media screen and (max-width:1000px) {
+  html {
+    background-image: url(./998641.jpg);
+    background-size: cover;
+  }
+  nav{
+    gap: 0;
+    background-color: rgba(128, 128, 128, 0);
+    border-right: 0;
+    min-height: 0;
+    padding: 0;
+  }
+  span{
+    min-height: 0;
+    padding: 0;
+    gap: 0;
+    display: block;
+    align-items:stretch;
+  }
+  body,#navMobil{
+    display: flex;
+    flex-direction: column;
+  }
+.navFlex{
+    display: flex;
+
+  }
+  #stars, #stars2, #stars3 {
+    display: none;
+  }
+  .etoile-filante{
+    display: none;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  main a {
+    display: block;
+  }
+  .navTitle{
+    margin-top: 1rem;
+  }
+
+  #timer, #end {
+    font-size:2rem;
+  }
+  span a, select, button{
+    padding: 0.5rem;
+  }
+#svg {
+  width: 70%;
+}
+
+  /* #btn {
+    display: none;
+  } */
+}
 /*------------------------------------étoiles filantes------------------*/
 
-
+@media screen and (max-height :450px) {
+  body{
+    flex-direction: row;
+  }
+}
 
 .etoile-filante {
   width: 7px;
@@ -314,12 +400,6 @@ main a:hover {
 
 /* -------------------------------------background------------------------ */
 
-
-html {
-
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  overflow: hidden;
-}
 
 #stars {
   width: 1px;

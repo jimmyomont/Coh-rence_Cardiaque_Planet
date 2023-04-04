@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;900&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <script defer src="./script.js"></script>
+  <!-- <script defer src="./ScriptMobil.js"></script> -->
   <link rel="icon" href="/svg/terre.png" />
   <title>Cohérence Cardiaque</title>
 </head>
@@ -20,11 +21,11 @@
 -->
   <header>
     <nav>
-      <span id="nav"">
-      <a>Theme</a>
-
+    <span id="nav" >
+      <section class="navFlex">
+              <a>Theme</a>
       <select name="" id="planet">
-        <option value="0">Veuillez choisir</option>
+        <option value="1">Veuillez choisir</option>
         <option value="1">Soleil</option>
         <option value="2">Lune</option>
         <option value="3">Terre</option>
@@ -32,7 +33,9 @@
         <option value="5">Mars</option>
         <option value="6">Venus</option>
       </select>
-      <a>Rythme</a>
+      </section>
+      <section class="navFlex">
+              <a>Rythme</a>
       <select name="" id="rythme">
         <option value="0">Veuillez choisir</option>
         <option value="1">6/4</option>
@@ -40,7 +43,9 @@
         <option value="3">4/6</option>
         <option value="4">3/7</option>
       </select>
-      <a>Audio</a>
+      </section>
+      <section class="navFlex">
+              <a>Audio</a>
       <select name="" id="sound">
         <option value="0">Veuillez choisir</option>
         <option value="1">Audio mute </option>
@@ -49,11 +54,10 @@
         <option value="4">City of the future</option>
         <option value="5">Spaceship ambience</option>
         <option value="6">The ice fields voyager</option>
-
       </select>
-      <button  id="playtest">Play / Stop</button>
-
-      <a>Timer</a>
+      </section>
+      <section class="navFlex">
+              <a>Timer</a>
       <select name="" id="compteur">
         <option value="0">Veuillez choisir</option>
         <option value="1">1 minute</option>
@@ -62,8 +66,8 @@
         <option value="4">4 minutes</option>
         <option value="5">5 minutes</option>
       </select>
+      </section>
     </span>
-
     <span class="hidden" id="nav2">
       <button class="btnClose"> Close</button>
       <p id="timer"></p>
@@ -88,14 +92,17 @@
     <div class="etoile-filante"></div>
   
   </div>
-
+  <article class="navTitle">
+      <p id="end" class="hidden">Fin de la relaxation</p>
   <img class="svg hidden" id="svg">
- 
+  <img class="svg floatbis svgHidden" src="/svg/sun.png" id="svgView">
     <article  id="main">
         <h1 class="float">Ma cohérence cardiaque</h1>
     <p>Avez vous choisi vos options ?</p>
     <a  id="btn" target="_blank">Alors démarrons la relaxation</a>
     </article>
+  </article>
+
 
   </main>
 

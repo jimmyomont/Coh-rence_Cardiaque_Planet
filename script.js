@@ -5,14 +5,16 @@ const nav2 = document.getElementById('nav2');
 const planet = document.getElementById('planet')
 const rythme = document.getElementById('rythme')
 const svg = document.getElementById('svg')
+const svgView = document.getElementById('svgView')
 const sound = document.getElementById('sound')
-const piste = document.getElementById('piste')
+// const piste = document.getElementById('piste')
 const play = document.getElementById('play');
-const playTest = document.getElementById('playtest');
+// const playTest = document.getElementById('playtest');
 const pause = document.getElementById('pause');
 const select = document.querySelector("#compteur");
 const timerElement = document.getElementById('timer');
-const beep = new Audio();
+const timerContent = document.getElementById('timerContent');
+// const beep = new Audio();
 const btnClose = document.querySelector('.btnClose');
 const etoile = document.getElementById('etoile')
 //--------------------hidden page ---------------------------
@@ -23,6 +25,7 @@ btn.addEventListener('click', () => {
     play.classList.remove('hidden');
     pause.classList.remove('hidden');
     etoile.classList.add('hidden');
+    svgView.classList.add('hidden');
 
 })
 
@@ -66,7 +69,6 @@ btn.addEventListener('click', () => {
         svg.classList.remove('float')
         switch (planetValue) {
             case "1":
-                // ajouter css src
                 svg.src = "/svg/sun.png";
                 svg.classList.remove('hidden')
                 break;
@@ -102,79 +104,14 @@ btn.addEventListener('click', () => {
     }
 });
 
-//-----------------------------sound---------------
-
-
-btn.addEventListener('click', () => {
-    let audioValue = sound.value;
-    if (main.classList.add('hidden') === main.classList.add('hidden')) {
-
-        switch (audioValue) {
-            case "2":
-                piste.src = "./sound/ambient-dream.mp3";
-                console.log(piste);
-                break;
-
-            case "3":
-                piste.src = "./sound/lunar-wind.mp3";
-                break;
-
-            case "4":
-                piste.src = "./sound/sounds-of-the-gloomy-city-of-the-future.mp3";
-                break;
-
-            case "5":
-                piste.src = "./sound/spaceship-ambience-with-effects.mp3";
-                break;
-            case "6":
-                piste.src = "./sound/stretched-sounds-with-07-neptune-the-ice-fields-voyager-audiolog.mp3";
-                break;
-        }
-    }
-});
-
-
-//-----------------------------extrait sound ----------------------
-
-function playExtrait(audio_path, time_in_milisec) {
-    beep.src = audio_path;
-    beep.loop = true;
-    beep.play();
-    setTimeout(() => { beep.pause(); }, time_in_milisec);
-}
-
-playTest.addEventListener('click', () => {
-    let audioValue = sound.value;
-    if (beep.paused) {
-        switch (audioValue) {
-            case "2":
-                playExtrait("./sound/ambient-dream.mp3", 30000);
-                break;
-            case "3":
-                playExtrait("./sound/lunar-wind.mp3", 30000);
-                break;
-            case "4":
-                playExtrait("./sound/sounds-of-the-gloomy-city-of-the-future.mp3", 30000);
-                break;
-            case "5":
-                playExtrait("./sound/spaceship-ambience-with-effects.mp3", 30000);
-                break;
-            case "6":
-                playExtrait("./sound/stretched-sounds-with-07-neptune-the-ice-fields-voyager-audiolog.mp3", 30000);
-                break;
-        }
-    }
-    else { beep.pause() }
-
-})
 // -----------------------------------------play/pause--------------------
 
 pause.addEventListener('click', () => {
-    piste.pause();
+    createAudio.pause();
 })
 
 play.addEventListener('click', () => {
-    piste.play()
+    createAudio.play()
 })
 
 //------------------------------------------timer----------------------------------
@@ -182,19 +119,25 @@ play.addEventListener('click', () => {
 let temps = 60;
 
 function diminuerTimer() {
-    setInterval(() => {
+    setInterval(timer, 1000 );
+}
+const timer =  ()=> {
         let minutes = parseInt(temps / 60, 10)
         let secondes = parseInt(temps % 60, 10)
         minutes = minutes < 10 ? "0" + minutes : minutes;
         secondes = secondes < 10 ? "0" + secondes : secondes;
         timerElement.textContent = minutes + ":" + secondes;
         temps = temps <= 0 ? 0 : temps - 1;
-    }, 1000);
+        if ( minutes === '00' && secondes ==='00'){
+            svg.classList.add('hidden')
+            document.getElementById('end').classList.remove('hidden')
+        }
 }
 
-//-----------------------------Select----------------------------------
 
-let id = null;
+// -----------------------------Select----------------------------------
+
+// let id = null;
 
 btn.addEventListener('click', () => {
     let selecTime = select.value;
@@ -227,56 +170,90 @@ btn.addEventListener('click', () => {
         }
     }
 })
-
 //------------------------btn close-------------------------------------
 
 btnClose.addEventListener('click', () => {
     location.reload();
 })
 
-//--------------------------volume audio ---------------------------------------
-
-beep.volume = 0.05;
-piste.volume = 0.1;
-
 //-----------------------select affichage-----------------
 
 planet.addEventListener('click', () => {
     let planetValue = planet.value;
-                svg.classList.add('svgHidden')
-                svg.classList.add('float')
+                // svgView.classList.add('svgHidden')
+                // svgView.classList.add('float')
         switch (planetValue) {
             case "1":
                 // ajouter css src
-                svg.src = "/svg/sun.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/sun.png";
+                svgView.classList.remove('hidden')
                 break;
 
             case "2":
-                svg.src = "/svg/moon.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/moon.png";
+                svgView.classList.remove('hidden')
                 break;
 
             case "3":
-                svg.src = "/svg/terre.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/terre.png";
+                svgView.classList.remove('hidden')
                 break;
 
             case "4":
-                svg.src = "/svg/Jupiter.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/Jupiter.png";
+                svgView.classList.remove('hidden')
                 break;
             case "5":
-                svg.src = "/svg/Mars.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/Mars.png";
+                svgView.classList.remove('hidden')
                 break;
             case "6":
-                svg.src = "/svg/venus.png";
-                svg.classList.remove('hidden')
+                svgView.src = "/svg/venus.png";
+                svgView.classList.remove('hidden')
                 break;
             default:
-                svg.classList.add('hidden')
+                svgView.classList.add('hidden')
                     break;
         }
     }
 );
+
+//-----------------------------------audio play-------------------------
+
+let createAudio = document.createElement('audio' )
+createAudio.volume='0.05'
+
+createAudio.classList.add('audio')
+const classAudio = document.querySelector(".audio")
+
+sound.addEventListener('change', () => {
+let audioValue = sound.value;
+        switch (audioValue) {
+            case "1":
+                createAudio.pause()
+                break;
+            case "2":
+                createAudio.src = "./sound/ambient-dream.mp3"
+                createAudio.play()
+                break;
+            case "3":
+                createAudio.src = "./sound/lunar-wind.mp3"
+                createAudio.play()
+                break;
+            case "4":
+                createAudio.src = "./sound/sounds-of-the-gloomy-city-of-the-future.mp3"
+                createAudio.play()
+                break;
+            case "5":
+                createAudio.src = "./sound/spaceship-ambience-with-effects.mp3"
+                createAudio.play()
+                break;
+            case "6":
+                createAudio.src = "./sound/stretched-sounds-with-07-neptune-the-ice-fields-voyager-audiolog.mp3"
+                createAudio.play()
+                break;
+        }
+});
+
+
+//------------------------------version Mobil-------------------
