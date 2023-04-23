@@ -256,4 +256,13 @@ let audioValue = sound.value;
 });
 
 
-//------------------------------version Mobil-------------------
+//------------------------------compteur de visites-------------------
+
+const counter = document.getElementById('counter')
+const updateCounter = async () =>{
+    const data = await fetch( "https://api.countapi.xyz/hit/counter_Coeherence_Cardiaque_planet/visits");
+    const count = await data.json()
+    counter.textContent = count.value
+}
+updateCounter()
+console.log(counter);
