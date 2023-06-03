@@ -273,5 +273,5 @@ tuto.addEventListener('click',() => {
     guide.classList.remove('hidden');
 })
 btnGuide.addEventListener('click', () => {
-    location.reload();
+    location.replace(location.href);
 })
