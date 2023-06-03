@@ -46,7 +46,6 @@ html {
   font-weight: 300; 
   cursor:default;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  /* overflow: hidden; */
 }
 #body{
   display: grid; 
@@ -56,9 +55,6 @@ html {
 }
 .overflowHidden{
   overflow: Hidden;
-}
-#bodyGuide{
-  /* overflow: scroll; */
 }
 body {
   color: #F1EDEA;
@@ -120,10 +116,6 @@ nav a {
   cursor:default;
 }
 
-/* span a:hover {
-  background: #161d30;
-  border: 1px solid rgba(255, 255, 255, .1);
-} */
 select:hover {
   cursor: pointer;
   background: #161d30;
@@ -136,7 +128,6 @@ button:hover {
   color: rgb(136, 0, 255);
   border: 1px solid rgb(136, 0, 255);
 }
-
 
 h1 {
   font-size: 4rem;
@@ -196,8 +187,6 @@ main a:hover {
     transform: translateY(30px);
   }
 }
-
-
 
 .svg {
   width: 50%;
@@ -283,10 +272,6 @@ main a:hover {
   font-weight: bold;
 }
 
- /* #navMobil {
-  display: none;
-}  */
-
 @media screen and (max-width:1000px) {
   #guide {
     padding-left: 15%;
@@ -298,7 +283,7 @@ main a:hover {
   html {
     background-image: url(./998641.jpg);
     background-size: cover;
-    /* overflow: scroll; */
+    overflow: scroll;
   }
   nav{
     gap: 0;
