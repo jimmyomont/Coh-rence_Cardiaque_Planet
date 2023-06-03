@@ -16,7 +16,13 @@ const timerElement = document.getElementById('timer');
 const timerContent = document.getElementById('timerContent');
 // const beep = new Audio();
 const btnClose = document.querySelector('.btnClose');
-const etoile = document.getElementById('etoile')
+const etoile = document.getElementById('etoile');
+const btnGuide = document.querySelector('.btnGuide');
+const guide = document.getElementById('guide');
+const tuto = document.getElementById('guidePush');
+const header = document.getElementById('header');
+const mainContent = document.getElementById('mainContent');
+const body = document.getElementById("body");
 //--------------------hidden page ---------------------------
 btn.addEventListener('click', () => {
     nav.classList.add('hidden');
@@ -256,13 +262,16 @@ let audioValue = sound.value;
 });
 
 
-//------------------------------compteur de visites-------------------
+//------------------------------Tutoriel-------------------
 
-const counter = document.getElementById('counter')
-const updateCounter = async () =>{
-    const data = await fetch( "https://api.countapi.xyz/hit/counter_Coeherence_Cardiaque_planet/visits");
-    const count = await data.json()
-    counter.textContent = count.value
-}
-updateCounter()
-console.log(counter);
+
+tuto.addEventListener('click',() => {
+    header.classList.add('hidden');
+    mainContent.classList.add('hidden');
+    body.classList.add('hidden');
+    body.classList.remove('overflowHidden')
+    guide.classList.remove('hidden');
+})
+btnGuide.addEventListener('click', () => {
+    location.reload();
+})

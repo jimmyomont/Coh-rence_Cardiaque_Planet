@@ -13,15 +13,18 @@
   <link rel="icon" href="/svg/terre.png" />
   <title>Cohérence Cardiaque</title>
 </head>
-<body>
+<body id="body" class="bodyGuide overflowHidden">
 <!-- 
 
   (ﾉ ◕ ヮ ◕)ﾉ
   
 -->
-  <header>
+  <header id="header">
     <nav>
     <span id="nav" >
+      <section class="navFlex">
+        <button id="guidePush">Tutoriel</button>
+</section>
       <section class="navFlex">
               <a>Theme</a>
       <select name="" id="planet">
@@ -80,7 +83,7 @@
     </audio>
   </header>
     </nav>
-  <main>
+  <main id="mainContent">
   <div id="stars"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
@@ -100,13 +103,26 @@
         <h1 class="float">Ma cohérence cardiaque</h1>
     <p>Avez vous choisi vos options ?</p>
     <a  id="btn" target="_blank">Alors démarrons la relaxation</a>
+    <p>La cohérence cardiaque est une pratique qui vise à réguler et à synchroniser les battements du cœur avec la respiration.</p>
+    <p>Elle repose sur l'idée que lorsque notre respiration et notre rythme cardiaque sont en harmonie, cela peut favoriser un état de relaxation, de calme et de bien-être.</p>
     </article>
   </article>
-
-
   </main>
-
-<footer>
+<div id="guide" class=" hidden">
+    <p class="guide-subtitle">Étape 1 : Choix du thème visuel</p>
+    <p>Sélectionnez le thème de planète pour créer une ambiance relaxante et immersive.</p>
+    <p class="guide-subtitle">Étape 2 : Réglage des rythmes de respiration</p>
+    <p>La cohérence cardiaque est basée sur des rythmes de respiration spécifiques.Nous utilisons les rythmes suivants : 6/4, 5/5, 4/6 et 3/7. Ces chiffres représentent le temps en secondes pour l'inspiration et l'expiration. Par exemple, 6/4 signifie une inspiration de 6 secondes suivie d'une expiration de 4 secondes.</p>
+    <p class="guide-subtitle">Étape 3 : Sélection des thèmes musicaux d'ambiance</p>
+    <p>La musique peut aider à créer une atmosphère relaxante lors de la pratique de la cohérence cardiaque. Choisissez un thème musical d'ambiance qui correspondent à vos préférences.</p>
+    <p class="guide-subtitle">Étape 4 : Réglage du minuteur </p>
+    <p>Un minuteur est essentiel pour vous guider pendant votre séance de cohérence cardiaque. Dans cette application, vous aurez pouvez régler le minuteur pour des durées de 1, 2, 3, 4 ou 5 minutes.</p>
+    <p class="guide-subtitle">Étape 5 : Utilisation </p>
+    <p>Observez attentivement l'animation de la planète. Lorsque la planète grossit, cela indique le temps d'inspiration, et lorsque la planète se rétrécit, cela indique le temps de l'expiration. Essayez de maintenir un rythme régulier en suivant les mouvements de la planète.</p>
+    <p>Relaxez-vous bien !</p>
+    <button class="btnGuide"> Close</button>
+</div>
+<footer>  
   <p class="hidden" id="counter"></p>
 </footer>
 

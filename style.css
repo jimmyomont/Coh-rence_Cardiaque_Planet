@@ -10,7 +10,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+#guide{
+  margin-top: 10%;
+  width: 396%;
+  font-size: 1.2rem;
 
+}
+.guide-subtitle{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0;
+}
+#guidePush:hover{
+  cursor: pointer;
+  background-color: #50A;
+}
 @keyframes show {
   from {
     opacity: 0;
@@ -30,12 +44,22 @@ html {
   font-weight: 300; 
   cursor:default;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
+#body{
+  display: grid; 
+}
+.overflowScroll{
+  overflow: scroll;
+}
+.overflowHidden{
+  overflow: Hidden;
+}
+#bodyGuide{
+  /* overflow: scroll; */
+}
 body {
   color: #F1EDEA;
-  display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
 }
@@ -262,9 +286,15 @@ main a:hover {
 }  */
 
 @media screen and (max-width:1000px) {
+  #guide {
+    width: 94%;
+    font-size: 1.2rem;
+
+}
   html {
     background-image: url(./998641.jpg);
     background-size: cover;
+    /* overflow: scroll; */
   }
   nav{
     gap: 0;
@@ -280,13 +310,12 @@ main a:hover {
     display: block;
     align-items:stretch;
   }
-  body,#navMobil{
+  body,#navMobil, #body{
     display: flex;
     flex-direction: column;
   }
 .navFlex{
     display: flex;
-
   }
   #stars, #stars2, #stars3 {
     display: none;
