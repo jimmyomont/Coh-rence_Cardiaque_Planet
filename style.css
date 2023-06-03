@@ -23,7 +23,14 @@
   font-weight: bold;
   margin: 0 0;
 }
+#guidePush{
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 #guidePush:hover{
+
   cursor: pointer;
   background-color: #50A;
 }
