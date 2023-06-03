@@ -11,10 +11,12 @@
   box-sizing: border-box;
 }
 #guide{
+  padding-left: 35%;
+  padding-right: 35%;
   margin-top: 10%;
   width: 396%;
   font-size: 1.2rem;
-
+  text-align: initial;
 }
 .guide-subtitle{
   font-size: 2rem;
@@ -287,6 +289,8 @@ main a:hover {
 
 @media screen and (max-width:1000px) {
   #guide {
+    padding-left: 15%;
+    padding-right: 15%;
     width: 94%;
     font-size: 1.2rem;
 
