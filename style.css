@@ -1,14 +1,19 @@
-
-
-
 .hidden {
   display: none;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.intro{
+  margin: 0 2em;
+  text-align: justify;
+  list-style-type : none;
+  font-size: 1.18em;
+}
+#btn{
+  margin-bottom: 2em;
 }
 #guide{
   padding-left: 35%;
@@ -38,7 +43,6 @@
   background: #161d30;
   border: 1px solid #534c7e;
 }
-
 
 #guidePush:hover{
   border: 1px solid rgb(136, 0, 255);
@@ -147,7 +151,7 @@ button:hover {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 
@@ -298,7 +302,7 @@ main a:hover {
 
 }
   html {
-    background-image: url(./998641.jpg);
+    background-image: url(./img/998641.jpg);
     background-size: cover;
     overflow: scroll;
   }
@@ -348,10 +352,6 @@ main a:hover {
 #svg {
   width: 70%;
 }
-
-  /* #btn {
-    display: none;
-  } */
 }
 /*------------------------------------étoiles filantes------------------*/
 

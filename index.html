@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,120 +10,138 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;900&display=swap" rel="stylesheet">
   <script defer src="./script.js"></script>
-  <!-- <script defer src="./ScriptMobil.js"></script> -->
   <link rel="icon" href="/svg/terre.png" />
-  <title>Cohérence Cardiaque</title>
+  <title>Planetary Rhythms : HeartSync</title>
 </head>
+
 <body id="body" class="bodyGuide overflowHidden">
-<!-- 
+  <!-- 
 
   (ﾉ ◕ ヮ ◕)ﾉ
   
 -->
   <header id="header">
     <nav>
-    <span id="nav" >
-      <section class="navFlex">
-              <a>Theme</a>
-      <select name="" id="planet">
-        <option value="1">Veuillez choisir</option>
-        <option value="1">Soleil</option>
-        <option value="2">Lune</option>
-        <option value="3">Terre</option>
-        <option value="4">Jupiter</option>
-        <option value="5">Mars</option>
-        <option value="6">Venus</option>
-      </select>
-      </section>
-      <section class="navFlex">
-              <a>Rythme</a>
-      <select name="" id="rythme">
-        <option value="0">Veuillez choisir</option>
-        <option value="1">6/4</option>
-        <option value="2">5/5</option>
-        <option value="3">4/6</option>
-        <option value="4">3/7</option>
-      </select>
-      </section>
-      <section class="navFlex">
-              <a>Audio</a>
-      <select name="" id="sound">
-        <option value="0">Veuillez choisir</option>
-        <option value="1">Audio mute </option>
-        <option value="2">Ambient dream</option>
-        <option value="3">Lunar wind</option>
-        <option value="4">City of the future</option>
-        <option value="5">Spaceship ambience</option>
-        <option value="6">The ice fields voyager</option>
-      </select>
-      </section>
-      <section class="navFlex">
-              <a>Timer</a>
-      <select name="" id="compteur">
-        <option value="0">Veuillez choisir</option>
-        <option value="1">1 minute</option>
-        <option value="2">2 minutes</option>
-        <option value="3">3 minutes</option>
-        <option value="4">4 minutes</option>
-        <option value="5">5 minutes</option>
-      </select>
-      </section>
-    </span>
-    <span class="hidden" id="nav2">
-      <button class="btnClose"> Close</button>
-      <p id="timer"></p>
-      <button  id="play">Audio play</button>
-      <button  id="pause">Audio pause</button>
-    </span>
+      <span id="nav">
+        <section class="navFlex">
+          <a>Theme</a>
+          <select name="" id="planet">
+            <option value="1">Veuillez choisir</option>
+            <option value="1">Soleil</option>
+            <option value="2">Lune</option>
+            <option value="3">Terre</option>
+            <option value="4">Jupiter</option>
+            <option value="5">Mars</option>
+            <option value="6">Venus</option>
+          </select>
+        </section>
+        <section class="navFlex">
+          <a>Rythme</a>
+          <select name="" id="rythme">
+            <option value="0">Veuillez choisir</option>
+            <option value="1">6/4</option>
+            <option value="2">5/5</option>
+            <option value="3">4/6</option>
+            <option value="4">3/7</option>
+          </select>
+        </section>
+        <section class="navFlex">
+          <a>Audio</a>
+          <select name="" id="sound">
+            <option value="0">Veuillez choisir</option>
+            <option value="1">Audio mute </option>
+            <option value="2">Ambient dream</option>
+            <option value="3">Lunar wind</option>
+            <option value="4">City of the future</option>
+            <option value="5">Spaceship ambience</option>
+            <option value="6">The ice fields voyager</option>
+          </select>
+        </section>
+        <section class="navFlex">
+          <a>Timer</a>
+          <select name="" id="compteur">
+            <option value="0">Veuillez choisir</option>
+            <option value="1">1 minute</option>
+            <option value="2">2 minutes</option>
+            <option value="3">3 minutes</option>
+            <option value="4">4 minutes</option>
+            <option value="5">5 minutes</option>
+          </select>
+        </section>
+      </span>
+      <span class="hidden" id="nav2">
+        <button class="btnClose"> Fermer</button>
+        <p id="timer"></p>
+        <button id="pause">Audio pause</button>
+        <button id="play">Audio lecture</button>
+      </span>
 
-    <audio class="hidden" autoplay controls="controls"id="piste" >
-      <source src = "" />
-    </audio>
+      <audio class="hidden" autoplay controls="controls" id="piste">
+        <source src="" />
+      </audio>
   </header>
-    </nav>
+  </nav>
   <main id="mainContent">
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+    
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="etoile">
+      <div class="etoile-filante"></div>
+      <div class="etoile-filante"></div>
+      <div class="etoile-filante"></div>
+    </div>
 
-  <div id="etoile">
-	
-    <div class="etoile-filante"></div>
-    <div class="etoile-filante"></div>
-    <div class="etoile-filante"></div>
-  
-  </div>
-  <article class="navTitle">
+    <article class="navTitle">
       <p id="end" class="hidden">Fin de la relaxation</p>
-  <img class="svg hidden" id="svg">
-  <img class="svg floatbis svgHidden" src="/svg/sun.png" id="svgView">
-    <article  id="main">
-        <h1 class="float">Ma cohérence cardiaque</h1>
-    <p>Avez vous choisi vos options ?</p>
-    <a  id="btn" target="_blank">Alors démarrons la relaxation</a>
-    <p>La cohérence cardiaque est une pratique qui vise à réguler et à synchroniser les battements du cœur avec la respiration.</p>
-    <p>Elle repose sur l'idée que lorsque notre respiration et notre rythme cardiaque sont en harmonie, cela peut favoriser un état de relaxation, de calme et de bien-être.</p>
-      <a id="guidePush"><div class="guideFlex">Conseils d'utilisation <img src="./svg/aide.png" alt="button aide"></div></a>
-  </article>
-  </article>
+      <img class="svg hidden" id="svg">
+      <img class="svg floatbis svgHidden" src="/svg/sun.png" id="svgView">
+      <article id="main">
+        <h1 class="float">Planetary Rhythms : HeartSync</h1>
+        <p>Avez vous choisi vos options ?</p>
+        <a id="btn" target="_blank">Alors démarrons la relaxation</a>
+        <p class="intro">Plongez dans un voyage intérieur captivant avec Planetary Rhythms : HeartSync. Explorez les
+          énergies
+          apaisantes des planètes et découvrez l'harmonie profonde entre votre cœur et l'univers qui vous entoure.
+          Laissez-vous guider par les rythmes célestes alors que votre respiration s' alignez-vous naturellement avec
+          les pulsations de l'espace. Avec HeartSync, trouvez l'équilibre, la tranquillité et la sérénité en harmonisant
+          votre cœur avec les mystères célestes</p>
+        <p class="intro">La cohérence cardiaque est une pratique qui vise à réguler et à synchroniser les battements du
+          cœur avec la
+          respiration.</p>
+        <p class="intro">Elle repose sur l'idée que lorsque notre respiration et notre rythme cardiaque sont en
+          harmonie, cela peut
+          favoriser un état de relaxation, de calme et de bien-être.</p>
+        <a id="guidePush">
+          <div class="guideFlex">Conseils d'utilisation <img src="./svg/aide.png" alt="button aide"></div>
+        </a>
+      </article>
+    </article>
   </main>
-<div id="guide" class=" hidden">
+  <div id="guide" class=" hidden">
     <p class="guide-subtitle">Étape 1 : Choix du thème visuel</p>
     <p>Sélectionnez le thème de planète pour créer une ambiance relaxante et immersive.</p>
     <p class="guide-subtitle">Étape 2 : Réglage des rythmes de respiration</p>
-    <p>La cohérence cardiaque est basée sur des rythmes de respiration spécifiques.Nous utilisons les rythmes suivants : 6/4, 5/5, 4/6 et 3/7. Ces chiffres représentent le temps en secondes pour l'inspiration et l'expiration. Par exemple, 6/4 signifie une inspiration de 6 secondes suivie d'une expiration de 4 secondes.</p>
+    <p>La cohérence cardiaque est basée sur des rythmes de respiration spécifiques.Nous utilisons les rythmes suivants :
+      6/4, 5/5, 4/6 et 3/7. Ces chiffres représentent le temps en secondes pour l'inspiration et l'expiration. Par
+      exemple, 6/4 signifie une inspiration de 6 secondes suivie d'une expiration de 4 secondes.</p>
     <p class="guide-subtitle">Étape 3 : Sélection des thèmes musicaux d'ambiance</p>
-    <p>La musique peut aider à créer une atmosphère relaxante lors de la pratique de la cohérence cardiaque. Choisissez un thème musical d'ambiance qui correspondent à vos préférences.</p>
+    <p>La musique peut aider à créer une atmosphère relaxante lors de la pratique de la cohérence cardiaque. Choisissez
+      un thème musical d'ambiance qui correspondent à vos préférences.</p>
     <p class="guide-subtitle">Étape 4 : Réglage du minuteur </p>
-    <p>Un minuteur est essentiel pour vous guider pendant votre séance de cohérence cardiaque. Dans cette application, vous aurez pouvez régler le minuteur pour des durées de 1, 2, 3, 4 ou 5 minutes.</p>
+    <p>Un minuteur est essentiel pour vous guider pendant votre séance de cohérence cardiaque. Dans cette application,
+      vous aurez pouvez régler le minuteur pour des durées de 1, 2, 3, 4 ou 5 minutes.</p>
     <p class="guide-subtitle">Étape 5 : Utilisation </p>
-    <p>Observez attentivement l'animation de la planète. Lorsque la planète grossit, cela indique le temps d'inspiration, et lorsque la planète se rétrécit, cela indique le temps de l'expiration. Essayez de maintenir un rythme régulier en suivant les mouvements de la planète.</p>
+    <p>Observez attentivement l'animation de la planète. Lorsque la planète grossit, cela indique le temps
+      d'inspiration, et lorsque la planète se rétrécit, cela indique le temps de l'expiration. Essayez de maintenir un
+      rythme régulier en suivant les mouvements de la planète.</p>
     <p>Relaxez-vous bien !</p>
-    <button class="btnGuide"> Close</button>
-</div>
-<footer>  
-  <p class="hidden" id="counter"></p>
-</footer>
+    <button class="btnGuide"> Fermer</button>
+  </div>
+  <footer>
+    <p class="hidden" id="counter"></p>
+  </footer>
 
 </body>
+
 </html>

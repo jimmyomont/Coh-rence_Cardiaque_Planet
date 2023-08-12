@@ -7,14 +7,11 @@ const rythme = document.getElementById('rythme')
 const svg = document.getElementById('svg')
 const svgView = document.getElementById('svgView')
 const sound = document.getElementById('sound')
-// const piste = document.getElementById('piste')
 const play = document.getElementById('play');
-// const playTest = document.getElementById('playtest');
 const pause = document.getElementById('pause');
 const select = document.querySelector("#compteur");
 const timerElement = document.getElementById('timer');
 const timerContent = document.getElementById('timerContent');
-// const beep = new Audio();
 const btnClose = document.querySelector('.btnClose');
 const etoile = document.getElementById('etoile');
 const btnGuide = document.querySelector('.btnGuide');
@@ -186,8 +183,6 @@ btnClose.addEventListener('click', () => {
 
 planet.addEventListener('click', () => {
     let planetValue = planet.value;
-                // svgView.classList.add('svgHidden')
-                // svgView.classList.add('float')
         switch (planetValue) {
             case "1":
                 // ajouter css src
