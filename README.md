@@ -4,7 +4,7 @@ Plongez dans un voyage intérieur captivant avec Planetary Rhythms : HeartSync. 
 
 ## voir sur le site : 
 
-## [Liens vers HeartSync](https://planetary-rhythms-heartsync.vercel.app/)
+## [Liens vers HeartSync](https://planetary-rhytms-heart-sync.vercel.app/)
 
 
 ## Fonctionnalités :
@@ -56,4 +56,4 @@ Pour rendre l'application responsive
 ### API DOM : 
 Pour manipuler et mettre à jour le contenu de la page en réponse aux actions de l'utilisateur.
 
-Une version "Accessible est en cour délaboration ici [Lien vers le site](https://planetary-rhythms-heartsync-accessibility.vercel.app/) & le [Lien vers le GitHub](https://github.com/jimmyomont/Planetary-Rhytms-HeartSync-Accessibility)
+Une version "Accessible est en cour délaboration ici [Lien vers le site](https://planetary-rhytms-heartsync-accessibility.vercel.app/) & le [Lien vers le GitHub](https://github.com/jimmyomont/Planetary-Rhytms-HeartSync-Accessibility)
