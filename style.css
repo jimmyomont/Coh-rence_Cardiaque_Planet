@@ -10,7 +10,7 @@
   margin: 0 2em;
   text-align: justify;
   list-style-type : none;
-  font-size: 1.18em;
+  font-size: 1.10em;
 }
 #btn{
   margin-bottom: 2em;
@@ -20,7 +20,7 @@
   padding-right: 35%;
   margin-top: 10%;
   width: 396%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: initial;
 }
 .guide-subtitle{
@@ -34,6 +34,7 @@
   align-items: center;  
 }
 #guidePush{
+  margin-bottom: 1em;
   box-shadow: none;
   display: inline-block;
   padding: 0.5rem;
