@@ -44,8 +44,22 @@
   background: #161d30;
   border: 1px solid #534c7e;
 }
+.guidePush{
+  margin-bottom: 1em;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  min-width: 17rem;
+  background: #161d30;
+  border: 1px solid #534c7e;
+}
 
 #guidePush:hover{
+  border: 1px solid rgb(136, 0, 255);
+  background-color: #50A;
+}
+.guidePush:hover{
   border: 1px solid rgb(136, 0, 255);
   background-color: #50A;
 }
